@@ -1,0 +1,12 @@
+#! /bin/env python3
+
+from bugbunnies.mqtt.handler import Handler
+from bugbunnies.config import Parser
+from bugbunnies.logging import getLogger
+
+if __name__ == "__main__":
+    args = Parser().parse_args()
+    logger = getLogger(__name__, args.verbose, args.log_path)
+
+    handler = Handler(config=args.config, logger=logger)
+    handler.start()

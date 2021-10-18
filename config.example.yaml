@@ -1,0 +1,28 @@
+irc:
+  server:
+    address: irc.crans.org
+    port: 6667
+
+  mqtt:
+    address: localhost
+    port: 1883
+
+  nick: Roran2
+  realname: Roran
+  channels:
+    - "#bots"
+  min_reconnect_interval: 5
+  max_reconnect_interval: 1800
+
+  admins:
+    - "Mikachu"
+
+mqtt:
+  server:
+    address: localhost
+    port: 1883
+  topics:
+    - "irc"
+  modules:
+    - cookie
+    - utilities
